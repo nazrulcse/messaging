@@ -1,0 +1,21 @@
+<div id="todo" class="container shares" ng-controller="TodosCtrl" ng-init="init()">
+  <div ng-repeat="entry in entries" class="share-container">
+    <div class="share-code">{{entry.id}}</div>
+    <div class="share-name">{{entry.description}}</div>
+    <div class="share-value">{{entry.status}}</div>
+  </div>
+  <% @todos.each do |todo|%>
+      <div class="share-container">
+        <div class="share-code"><%= todo.id %></div>
+        <div class="share-name"><%= todo.description %></div>
+        <div class="share-value"><%= todo.status %></div>
+      </div>
+  <%end%>
+</div>
+<div id="notification">
+  <h2 class="title">  dsfg dsfgdf </h2>
+  <div class="body">
+    fdg dfg sdf gdsfg
+  </div>
+</div>
+<%= link_to 'add todo', new_todo_path %>
